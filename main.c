@@ -6,14 +6,7 @@
 
 int main()
 {
-    // Creating child process
-    int p = fork();
-    if (p > 0)
-    {
-        senderProcess();
-    } else{
-        receiverProcess();
-    }
+    senderProcess();
 
     //TEST_SENDER();
     return 0;
