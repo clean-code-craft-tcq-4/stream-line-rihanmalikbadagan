@@ -7,6 +7,6 @@ int main()
 {
     senderProcess();
 
-    //TEST_SENDER();
+    TEST_SENDER();
     return 0;
 }
