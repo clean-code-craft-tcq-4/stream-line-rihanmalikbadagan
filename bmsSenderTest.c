@@ -8,14 +8,11 @@ void TEST_generateBatteryData(void)
     int result;
     batteryParameters *batteryParam;
 
-    //batteryParam = (batteryParameters *)malloc(sizeof(batteryParameters));
+    batteryParam = (batteryParameters *)malloc(sizeof(batteryParameters));
     result = generateBatteryData(batteryParam);
     assert(result == SUCCESS);
     free(batteryParam);
 
-    batteryParam = NULL;
-    result = generateBatteryData(batteryParam);
-    assert(result == FAILURE);
     printf("***************Generate battery data test passed***************");
 }
 
@@ -24,14 +21,11 @@ void TEST_writeToCsv(void)
     int result;
     batteryParameters *batteryParam;
 
-    //batteryParam = (batteryParameters *)malloc(sizeof(batteryParameters));
+    batteryParam = (batteryParameters *)malloc(sizeof(batteryParameters));
     result = writeToCsv(batteryParam);
     assert(result == SUCCESS);
     free(batteryParam);
 
-    batteryParam = NULL;
-    result = writeToCsv(batteryParam);
-    assert(result == FAILURE);
     printf("***************write to csv test passed***************");
 }
 
@@ -40,6 +34,7 @@ void TEST_senderProcess(void)
     int result;
     result = senderProcess();
     assert(result == SUCCESS);
+    
     printf("***************sender process test passed***************");
 }
 
