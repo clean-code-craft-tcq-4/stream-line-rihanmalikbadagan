@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "bmsSender.h"
-
+/**
+ * @brief 
+ * 
+ * @param ptr_BatteryParam 
+ * @return status_en 
+ */
 status_en generateBatteryData(batteryParameters *ptr_BatteryParam)
 {
     if (ptr_BatteryParam != NULL)
@@ -14,7 +19,12 @@ status_en generateBatteryData(batteryParameters *ptr_BatteryParam)
     }
     return FAILURE;
 }
-
+/**
+ * @brief 
+ * 
+ * @param ptr_BatteryParam 
+ * @return status_en 
+ */
 status_en writeToCsv(batteryParameters *ptr_BatteryParam)
 {
     FILE *fd = fopen(CSV_FILE, "a");
@@ -32,7 +42,11 @@ status_en writeToCsv(batteryParameters *ptr_BatteryParam)
     }
     return FAILURE;
 }
-
+/**
+ * @brief Create a Csv File object
+ * 
+ * @return status_en 
+ */
 status_en createCsvFile(void)
 {
     FILE *fd = fopen(CSV_FILE, "w");
@@ -42,7 +56,11 @@ status_en createCsvFile(void)
     fclose(fd);
     return SUCCESS;
 }
-
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 int senderProcess(void)
 {
     printf("Inside sender process\n");
